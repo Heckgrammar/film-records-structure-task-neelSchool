@@ -30,9 +30,15 @@
             //  Write the code to do the following
             // Loop through the array of films and check for the newest film
             // Produce one output to say the name of the newest film
-
+            for (int i = 0; i < filmCollection.size(); ++i) {
+                if (year < filmCollection[i].year) {
+                    year = filmCollection[i].year;
+                    position = i;
+                }
+            }
+            Console.WriteLine(filmCollection[position].title);
             // Write the code to update the andMan record to show the film is currently being shown
-
+            filmCollection[0].beingShown = true;
 
         }
     }
